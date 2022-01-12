@@ -20,6 +20,13 @@
  */
 function sumOdds(numbers) {
   // Your code here
+  // #1 filter odd numbers and copy them into an array
+  // #2 return sum of filtered numbers
+  let sum = 0 
+  // function odd (sumOdds) {
+  //   number.filter(number % 2 === 1)
+  // }
+  numbers.filter(odd % 2 ===1)
 }
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
@@ -38,8 +45,9 @@ function sumOdds(numbers) {
  */
 function characterCount(string, c) {
   // Your code here
+  string.toLowerCase().indexOf(c.toLowerCase())
 }
-// console.log(characterCount("Character Count is clever", "c"));
+console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * largestIncrement(numbers):
@@ -59,6 +67,8 @@ function characterCount(string, c) {
  */
 function largestIncrement(numbers) {
   // Your code here
+
+
 }
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
@@ -75,6 +85,11 @@ function largestIncrement(numbers) {
  */
 function afterX(numbers, x) {
   // Your code here
+//   numbers.forEach(number => {
+//     // if (number[] > number.indexOf(x)){
+//       return number
+//     }
+//   });
 }
 // console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
@@ -91,8 +106,11 @@ function afterX(numbers, x) {
  */
 function abbreviate(firstName, lastName) {
   // Your code here
+  let firstLetter = firstName.slice(0,1).toUpperCase()
+  let lastLetter = lastName.slice(0,1).toUpperCase()
+    return firstLetter + lastLetter
 }
-// console.log(abbreviate("miss", "Stephane"));
+console.log(abbreviate("miss", "Stephane"));
 
 /**
  * isUpperCase(string):
@@ -106,7 +124,12 @@ function abbreviate(firstName, lastName) {
  */
 function isUpperCase(string) {
   // Your code here
-}
+  if (string === string.toUpperCase()){
+    return true
+  }else{
+    return false
+  }
+};
 
 // console.log(isUpperCase("JCREW"));
 
@@ -122,7 +145,14 @@ function isUpperCase(string) {
  */
 function elementInArray(numbers, x) {
   // Your code here
-}
+//   numbers.forEach(number => {
+//     if (number.indexOf(x)){
+//       return true
+//     } else {
+//       return false
+//     }
+//   }
+};
 // console.log(elementInArray([5, 6, 7], 8));
 
 module.exports = {
