@@ -9,7 +9,7 @@
  * Good luck!
  */
 
-const { arrayify } = require("babel-core/lib/util")
+const { arrayify } = require("babel-core/lib/util");
 
 /**
  * sumOdds(numbers):
@@ -40,10 +40,10 @@ function sumOdds(numbers) {
   // console.log(number + number))
 
   // for some reason line 41 fails the test when const is removed
-  const odds = numbers.filter((n) => n % 2 === 1)
-  let num = 0
-  odds.forEach((n) => num += n)
-  return num
+  const odds = numbers.filter((n) => n % 2 === 1);
+  let num = 0;
+  odds.forEach((n) => (num += n));
+  return num;
 }
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
@@ -65,9 +65,9 @@ function characterCount(string, c) {
   // string.toLowerCase().indexOf(c.toLowerCase());
   // string.toLowerCase().match(c);
 
-  const low = string.toLowerCase()
-  const count =  low.split(c).length-1;
-  return count
+  const low = string.toLowerCase();
+  const count = low.split(c).length - 1;
+  return count;
 }
 // console.log(characterCount("Character Count is clever", "c"));
 
@@ -91,7 +91,7 @@ function largestIncrement(numbers) {
   // Your code here
   // when using map it returns undefined. laaaaaiiiiiish maaa nadri eeee minuuuuuu maaa nadri
   // diff = numbers.map((n) => {
-    // removing diff returns undefined
+  // removing diff returns undefined
   // diff = numbers.at(numbers.indexOf(n)+1) - n
   // to remove any Nan wayid feeh su3rat 5aa3 5aa3 5aa3 5aa3
   // if (diff){return diff}
@@ -104,12 +104,12 @@ function largestIncrement(numbers) {
   // diff = numbers.map((n, i, arr) => {if(i < arr.length){ numbers[i+1] - n}})
   // console.log(diff)
 
-  diff = numbers.map((n, i, arr) => arr[i+1] - n)
-  diff.sort((first, second) => second - first) 
+  let diff = numbers.map((n, i, arr) => arr[i+1] - n)
+  diff.sort((first, second) => second - first)
   diff.splice(1,diff.length)
-  console.log(diff)
+  return diff.toString()
 }
-console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
+// console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
 /**
  * afterX(numbers, x):
@@ -130,8 +130,8 @@ function afterX(numbers, x) {
   //     }
   //   });
 
-  const after = numbers.filter((num) => num > x)
-  return after
+  const after = numbers.filter((num) => num > x);
+  return after;
 }
 // console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
@@ -186,16 +186,16 @@ function isUpperCase(string) {
  */
 function elementInArray(numbers, x) {
   // Your code here
-    // numbers.forEach(number => {
-    //   if (number.indexOf(x)){
-    //     return true
-    //   } else {
-    //     return false
-    //   }
-    // })
+  // numbers.forEach(number => {
+  //   if (number.indexOf(x)){
+  //     return true
+  //   } else {
+  //     return false
+  //   }
+  // })
 
-  return numbers.some((num) => num === x)
-  }
+  return numbers.some((num) => num === x);
+}
 // console.log(elementInArray([5, 6, 7], 8));
 
 module.exports = {
